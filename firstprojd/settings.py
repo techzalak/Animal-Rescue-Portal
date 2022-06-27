@@ -24,7 +24,7 @@ MEDIA_URL = '/media/'
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '@rem8x-px!zqq8zsmr))i3ohhqs15kqw^c5hwj24yw)zez^(7p'
+SECRET_KEY 
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -138,7 +138,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'animalssupsystem@gmail.com'
-EMAIL_HOST_PASSWORD ='animal@123'
+EMAIL_HOST_PASSWORD =''
 
-STRIPE_SECRET_KEY = 'sk_test_51Is58uSEtOES0fnRubY4u4KckqlvVTLBkqRq0jooaR8scO6Gl3lAIs4w5sbrf9J7L41L4jBguOYhJQP5zI4HUN4m00tqhOyyYD'
-STRIPE_PUBLISHABLE_KEY = 'pk_test_51Is58uSEtOES0fnRhEw5dDMC6zDhYUmvyjcAC32742YC8anKEubxcxWsHFei0CJFAwKFtWhfMToZ11KaKZ4S2deR00abl6FlZv'
+STRIPE_SECRET_KEY = ''
+STRIPE_PUBLISHABLE_KEY = ''
