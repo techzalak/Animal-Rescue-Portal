@@ -1,0 +1,431 @@
+* {box-sizing: border-box}
+body {
+    font-family: Verdana,sans-serif; margin:0;
+    background-color:bisque;
+    
+}
+
+.img3
+{
+    
+    position: absolute; 
+    left: 0.1%;
+    top:0.1%;
+    z-index: -1;
+    height:auto;
+    max-height:35%;
+    width:99.9vw;
+
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background-color: #e7e0e0f1;
+  width:30vw;
+  height: 42vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-top:18vw;
+}
+
+/* Slides */
+.mySlides {
+  position:relative;
+  display: none;
+  padding: 5vw;
+  text-align: center;
+}
+.Slide2 {
+  position:relative;
+  z-index:1;
+  text-align: left;
+  font-size: 1vw;
+}
+.textbox2{
+  font-size: 1vw;
+}
+.textbox3{
+  position: relative;
+  font-size: 1vw;
+  left:-1vw;
+}
+.textarea{
+  height:3vw;
+  font-size: 1vw;
+}
+ul{
+list-style-type: none;
+}
+/* Next & previous buttons */
+/*.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 8vw;
+    width: absolute;
+    margin-top: 10vw;
+    padding: 4vw;
+    color: rgb(15, 15, 15);
+    font-weight: bold;
+    font-size: 1.5vw;
+    border-radius: 0 3vw 3vw 0;
+    user-select: none;
+    width:10vw;
+    height: 10vw;
+    margin-left: 20vw;
+    margin-right: 10vw;
+}
+.prev{
+    position: absolute;
+    right: 0;
+    border-radius: 3vw 0 0 3vw;
+    top: 16vw;
+    width:30vw;
+    height:30vw;
+    margin-left: 20vw;
+    margin-right: 10vw;
+
+
+}*/
+  
+  /* Position the "next button" to the right */
+/*.next {
+    position: absolute;
+    right: 0;
+    border-radius: 3vw 0 0 3vw;
+    top: 16vw;
+    width:30vw;
+    height:30vw;
+    margin-left: 20vw;
+    margin-right: 10vw;
+}
+/* On hover, add a black background color with a little bit see-through */
+/*.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    top: 16vw;
+    width:5vw;
+    height: 5vw;
+    margin-left: 20vw;
+    margin-right: 10vw;
+  
+  }*/
+  
+  /* The dot/bullet/indicator container */
+.dot-container {
+  position: relative;
+  text-align: center;
+  padding: 1vw;
+  background: rgb(123, 202, 248);
+  width:30vw;
+  height: 9vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  }
+  
+  /* The dots/bullets/indicators */
+.dot {
+    position: relative;
+    cursor: pointer;
+    height: 2vw;
+    width: 2vw;
+    margin: 0 2vw;
+    background-color: rgb(245, 135, 135);
+    border-radius: 5vw;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    left:1vw;
+  }
+  
+  /* Add a background color to the active dot/circle */
+.active, .dot:hover {
+    background-color: #e95555;
+}
+  
+  /* Add an italic font style to all quotes */
+.p1{
+    font-style: italic;
+    font-size: 1vw;
+}
+  
+  /* Add a blue color to the author*/
+.author {color: cornflowerblue;
+    width: 30;
+    height: 30;
+}
+/*
+.next{
+    position:relative;
+    top:-30%;
+    right:-5vw;
+    left:10vw;
+    cursor: pointer;
+    user-select: none;
+    font-size: 2vw;
+    z-index:1;
+}
+.prev{
+    position: relative;
+    top:-12vw;
+    right:21vw;
+    left:0.1vw;
+    font-size:2vw;
+    z-index:1;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}*/
+.next1{
+  position: relative;
+  top:-3.5vw;
+  z-index:1;
+  width:5vw;
+  height:3vw;
+  text-align: center;
+  right: -10vw;
+  background-color: rgb(123, 202, 248);
+  border: none;
+  outline: none;
+
+}
+.prev1{
+  position: relative;
+  top:9vw;
+  z-index:1;
+  width:5vw;
+  height: 3vw;
+  text-align: center;
+  left:-4.8vw;
+  background-color: rgb(123, 202, 248);
+  border: none;
+  outline: none;
+}
+.next2{
+  position: relative;
+  z-index: 1;
+  top:12vw;
+  width:6vw;
+  height:3vw;
+  text-align: center;
+  right:-17vw;
+  background-color: rgb(123, 202, 248);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.3vw;
+  font-weight: bold;
+}
+
+
+
+.next1:hover,.next2:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+  border-top-right-radius: 2vw;
+  border-bottom-right-radius: 2vw;
+}
+.prev1:hover{
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+  border-top-left-radius: 2vw;
+  border-bottom-left-radius: 2vw;
+}
+  
+.button {
+  position: relative;
+  border: none;
+  color: white;
+  padding: 0.5vw 1vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.5vw;
+  margin: 1vw 0.5vw;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button0 {
+  position:relative;
+  background-color: white; 
+  color: black; 
+  border: 0.4vw solid #fdfffe;
+}
+.button1 {
+  position:relative;
+  background-color: white; 
+  color: black; 
+  border: 0.2vw solid #4CAF50;
+  left:-5.8vw
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button2 {
+  position: relative;
+  background-color: white; 
+  color: black; 
+  border: 0.2vw solid #4CAF50;
+  left:-4.3vw;
+}
+.button2:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+.button3 {
+  position:relative;
+  background-color: white; 
+  color: black; 
+  border: 0.2vw solid #4CAF50;
+  left:13vw;
+  top:-4.9vw;
+}
+
+.button3:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button4 {
+  position:relative;
+  background-color: white; 
+  color: black; 
+  border: 0.2vw solid #4CAF50;
+  left:-14vw;
+}
+
+.button4:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+.button5 {
+  position:relative;
+  background-color: white; 
+  color: black; 
+  border: 0.2vw solid #4CAF50;
+  top:-4.9vw;
+  left:3.3vw;
+}
+
+.button5:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button6 {
+  position:relative;
+  background-color: white; 
+  color: black; 
+  border: 0.2vw solid #4CAF50;
+  top:-4.9vw;
+  left:4.9vw;
+}
+
+.button6:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+.button7 {
+  position: relative;
+  background-color: white; 
+  color: black; 
+  border: 0.2vw solid #4CAF50;
+  top:-4.9vw;
+  left:-10vw;
+  z-index: 1;
+}
+.button7:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+.button8 {
+  position:relative;
+  background-color: white; 
+  color: black; 
+  border: 0.2vw solid #4CAF50;
+  top:-9.8vw;
+  left:4vw;
+  z-index:1;
+}
+
+.button8:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+.molon{
+  position: relative;
+  height:3vw;
+  width:7vw;
+  font-size: 1.5vw;
+}
+.amount{
+  font-size:1vw;
+  border:none;
+  background-color: #f1f1f1;
+  width:5vw;
+  outline:none;
+  outline-color: #f1f1f1;
+}
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.display{
+    position:relative;
+    left: 60vw;
+    top: -51vw;
+    background-color:  #e7e0e0f1;
+    width: 30vw;
+    padding: 2vw
+}
+.donors{
+  background-color: white;
+  padding-left: 1vw;
+  padding-bottom: 1vw;
+  padding-top: 0.5vw;
+    
+}
+.name{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 1.4vw;
+}
+.comment{
+  font-family: 'Droid serif', serif;
+  opacity: 0.8;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.3vw;
+}
+.price{
+  font-family: 'Bitter',serif;
+  font-size: 1.4vw;
+}
+#sect{
+    position:relative;
+    left: 60vw;
+    top: -52vw;
+    background-color:  #e7e0e0f1;
+    width: 30vw;
+    padding: 2vw;
+    z-index: -1;
+}
+#showbtn{
+  background-color:#e7e0e0f1;
+  font-size: 1.3vw;
+  border: none;
+  font-weight: 700;
+  float:right;
+  color:navy;
+  font-style: underline;
+  z-index: 1;
+  text-decoration: underline;
+}
+#showbtn:hover{
+  color: rgb(182, 20, 47);
+  
+}

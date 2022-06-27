@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Animal Support System</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{% static 'css/account.css' %}" />
+    </head>
+    <body>
+      <div class="div1">
+        <div class="divhead">Welcome {{name}}</div>
+          <a href="{% url 'logout' %}" class="an">Logout</a>
+          <button type="button" data-toggle="modal" data-target="#edit" data-backdrop="static" class="btn1">Edit profile</button>
+          
+        </div>
+        <section>
+          <div class="div4">
+            <p class="p1">To rescue maximum animals and also to save our volunteer's time, we have come up with a new idea in this you have to just save those animals which are near to the place where you spend most of your day. </p>
+            <p class="p2">So, to help us in this and to save your time, add the location where you are available for most of your daytime.</p>
+            <button type="button" data-toggle="modal" data-target="#addr" data-backdrop="static" class="btn2">Address</button>
+          </div>
+        </section>
+        <div class="modal fade" id="edit" role="dialog">
+            <div class="vertical-alignment-helper">
+            <div class="modal-dialog vertical-center">
+            
+              <!-- Modal content-->
+              <div class="modal-content  divmodal">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h2 align="center">Edit Profile</h2>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        {% for field in uedit %}
+                          {{field.label_tag}} {{field}} <p class="errorm">{{field.errors|striptags}}</p><br>
+                        {% endfor %}
+                        {% for field in adedit %}
+                        {{field.label_tag}} {{field}} <p class="errorm">{{field.errors|striptags}}</p><br>
+                        {% endfor %}
+                        <input type="submit" id="btn1" value="Save" class="button3" name="save">
+                        {% if uedit.errors or adedit.errors %}
+                          <script>
+                          $('#edit').modal('show');
+                          </script>
+                        {% endif %}
+                      </form>
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="button4" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            
+              
+            </div>
+            </div>
+        </div>
+        <div class="modal fade" id="addr" role="dialog">
+            <div class="vertical-alignment-helper">
+            <div class="modal-dialog vertical-center">
+            
+              <!-- Modal content-->
+              <div class="modal-content  divmodal">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h2 align="center">Address</h2>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        {% for field in addr %}
+                          {{field.label_tag}} {{field}} <p class="errorm">{{field.errors|striptags}}</p><br>
+                        {% endfor %}
+                        <input type="submit" id="btn1" value="Save" class="button3" name="address">
+                        {% if addr.errors %}
+                          <script>
+                          $('#edit').modal('show');
+                          </script>
+                        {% endif %}
+                      </form>
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="button4" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            
+              
+            </div>
+            </div>
+        </div>
+        <div class="div5">
+          <h2>Notifications</h2>
+          {% if pp1 == 'none' and pp2 == 'none' %}
+            <br><p style="text-align:center;font-size: 1vw;font-weight: 700;">No Notifications</p>
+  
+          {% elif pp1 %}
+            <br>
+              <div class="box sb2">
+                {{pp1.msg}}
+                <br><br>
+                <button type="button" onclick="myFunction()" id="myBtn" class="btn3">Accept</button>
+                <button type="button" onclick="myFunction()" id="myBtn1" class="btn4">Decline</button>
+              </div>
+              <br>
+          {% endif %}
+      
+          {% if pp2 and pp2 != 'none' %}
+            {% for p in pp2 %}
+              <div class="box sb2">
+              {{p.msg}}
+              </div>
+              <br>
+            {% endfor %}
+          {% endif %}
+
+          <script>
+            function myFunction() {
+              var x=document.getElementById("myBtn");
+              x.style.display="none";
+              var y=document.getElementById("myBtn1");
+              y.style.display="none";
+            }
+          </script>
+        </div>
+      
+      
+    </body>
+</html>

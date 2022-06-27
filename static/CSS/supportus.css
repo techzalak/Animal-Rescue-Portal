@@ -1,0 +1,99 @@
+body {
+    background-color:bisque;
+}
+.img3
+{
+    
+    position: absolute; 
+    left: 0.1%;
+    top:0.1%;
+    z-index: -1;
+    height:auto;
+    max-height:35%;
+    width:99.9vw;
+
+}
+ul{
+    position:absolute;
+    top:19vw;
+    list-style-type: none;
+    margin: 2vw;
+    padding: 0;
+    width: 23vw;
+    background-color: bisque;
+    /*border-radius: 2vw;*/
+}
+li a {
+    display: block;
+    color: rgb(15, 12, 13);
+    padding: 1vw 1vw;
+    text-decoration: none;
+    font-size: 1.9vw;
+    font-weight: 900;
+}
+  
+  /* Change the link color on hover */
+li a:hover {
+    background-color: rgb(255, 255, 255);
+    border-radius: 2vw;
+    color: rgb(0, 153, 255);
+}li a:active{
+    border:  5px solid rgb(20, 238, 74);
+}
+.active{
+    background-color: #f52322;
+    color:#ffffff;
+    border-top-right-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+}
+.div1{
+    font-size: 1.7vw;
+    margin-top: 22vw;
+    margin-left: 32vw;
+    margin-right: 20vw;
+    line-height: 3.5vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.button {
+    display: inline-block;
+    border-radius: 3.5vw;
+    background-color: #47e761;
+    color: black;
+    text-align: center;
+    font-size: 4.0vw;
+    width: 20vw;
+    height:6vw;
+    transition: all 0.5s;
+    text-shadow: 2px 2px 4px rgb(214, 9, 9);
+    text-align: center;
+    cursor: auto;
+    margin: 6vw;
+    margin-left: 41vw;
+    margin-right: 22vw;
+}
+  
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -5vw;
+    transition: 0.5s;
+}
+  
+.button:hover span {
+    padding-right: 4vw;
+}
+  
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+    text-shadow: #ffffff;
+}

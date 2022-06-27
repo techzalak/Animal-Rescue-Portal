@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Donate-Animal Support System</title>
+        <link rel="stylesheet" href="{% static 'css/donate.css' %}" />
+    </head>
+    <body>
+        <img src="{% static 'images/rescueimg.png' %}" alt='hello'  class="img3"/>
+        <section>
+       <div class="slideshow-container">
+
+        <div class="mySlides">
+          <p align='center' class="p1"><b>Choose Amount</b></p>
+          <p class="p1">How much would you like to donate? We make sure your donation goes directly to support animals. Thank you for your generosity!</p><br>
+          <button class="button button0"><b>INR|<span style='font-size:1.5vw;'>&#8377;</span></b>
+          <input type="text" id="myBtn" name="fname"  value=" " class="molon"><br>
+          <button class="button button1" onclick="myvalue(500)">&#8377;500</button>
+          <button class="button button2" onclick="myvalue(1000)">&#8377;1,000</button>
+          <button class="button button3" onclick="myvalue(2500)">&#8377;2,500</button>
+          <button class="button button4" onclick="myvalue(5000)">&#8377;5,000</button>
+          <button class="button button5" onclick="myvalue(10000)">&#8377;10,000</button>
+          <button class="button button6" onclick="myvalue(25000)">&#8377;25,000</button>
+          <button class="button button7" onclick="myvalue(50000)">&#8377;50,000</button>
+          <button class="button button8" onclick="myvalue(1)" style='font-size:1.3vw;' id="custom">Donate a custom amount</button>
+          <button class="next1" style='font-size: 1.3vw;'onclick="cus()"><a onclick="plusSlides(1)"><b>Next</b></a></button>
+          <script>
+            function myvalue(n){ 
+              document.getElementById("myBtn").value=n;
+              document.getElementById("myBtn1").value=n;
+              //document.getElementById("myBtn").value = n
+            }
+            function cus(){
+              var x = document.getElementById("myBtn").value;
+              document.getElementById("myBtn1").value=x;
+            }
+          </script>
+        </div>
+        
+        <div class="mySlides">
+          <p style="font-size: 2vw;">Details Form</p>
+          <div class="Slide2" id="s2">
+          <form action="" method="POST">
+            <table>
+                {% csrf_token %}
+               <p>{{form.as_p}} </p>
+               <p>You are donating &#8377;<input type="text" id="myBtn1" name="amt" value=" " class="amount" readonly></p>
+            
+            </table>
+            <input type="submit" id="submit" class="next2"  name="submit"  onclick="currentSlide(2)">
+          
+          </form>
+          <button class="prev1" style='font-size: 1.3vw;'><a onclick="plusSlides(-1)"><b>Prev</b></a></button>
+        
+        </div>
+        </div>
+        
+        
+        <!--<div class="mySlides">
+          <q>I have not failed. I've just found 10,000 ways that won't work.</q>
+          <p class="author">- Thomas A. Edison</p>
+        </div>-->
+        
+        <!--<a class="prev" onclick="plusSlides(-1)"><B><</B></a>
+        <a class="next" onclick="plusSlides(1)"><B>></B></a>-->
+        
+        </div>
+        
+        <div class="dot-container">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <!--<span class="dot" onclick="currentSlide(3)"></span>-->
+        </div>
+        </section>
+        <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+        
+        <div class="display">
+            {% if don %}
+                <h2 align = "center">Our Donors</h2>
+                <br>
+                {% for dm in don %}
+                <br>
+                <div class="donors">
+                    {% if dm.anony == 'yes' or dm.anony == 'Yes'%}
+                        <p class="name"> Anonymous </p>
+                    {% else %}    
+                        <p class="name">{{ dm.name }}</p>
+                    {% endif %}
+                    <p class="price"><b>&#8377;{{dm.amt}}</b></p>
+                    <p class="comment">“{{dm.comment}}”</p>
+                </div>
+                {% endfor %}
+                
+            {% endif %}
+            <Button ONCLICK="ShowAndHide()" id="showbtn">Read More</Button>
+          </div>
+
+          <div class=dis2 id="sect" style="display:none">
+            {% if don2 %}
+            
+              {% for dm2 in don2 %}
+                <br>
+                <div class="donors">
+               
+                  {% if dm2.anony == 'yes' or dm2.anony == 'Yes'%}
+                    <p class="name"> Anonymous </p>
+                  {% else %}    
+                    <p class="name">{{ dm2.name }}</p>
+                  {% endif %}
+                    <p class="price"><b>&#8377;{{dm2.amt}}</b></p>
+                    <p class="comment">“{{dm2.comment}}”</p>
+                    </div>
+              {% endfor %}
+            {% endif %}
+          </div>
+            <SCRIPT>
+              function ShowAndHide() {
+                  var x = document.getElementById('sect');
+                  var sh = document.getElementById('showbtn');
+                  if (x.style.display == 'none') {
+                      x.style.display = 'block';
+                      sh.innerHTML = 'Read less';
+                  } else {
+                      x.style.display = 'none';
+                      sh.innerHTML = 'Read more';
+                  }
+              }
+            </SCRIPT>
+       
+       
+    </body>
+</html>

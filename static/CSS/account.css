@@ -1,0 +1,236 @@
+body{
+    background-color: bisque;
+    overflow-y:auto;
+}
+
+.div1{
+    background-color: rgba(238, 113, 120, 0.5);
+    width:99vw;
+    position:absolute;
+    left:0vw;
+    top:-5vw;
+    height: 18vw;
+    opacity: 20;
+    z-index:-1;
+    padding:1vw;
+}
+.divhead{ 
+    position: relative;
+    color: rgb(213, 77, 123); 
+    font-family: 'Droid serif', serif; 
+    font-size:8vw; 
+    line-height: 2vw; 
+    font-weight: normal; 
+    margin-bottom: 0.2vw; 
+    margin-top: 5vw; 
+    padding:1vw;
+    text-align: center; 
+    text-shadow: 0 0.1vw 0.1vw #fff; 
+    font-style: italic;
+    top:3vw;
+    z-index:-1;
+}
+/*.div2{
+    position: relative;
+    background-color: rgb(255, 0, 0) ;
+    width:5vw;
+    height:2vw;
+    z-index: 1;
+    left:93vw;
+    top:5vw;
+    padding:0.2vw;
+    text-align: center;
+}*/
+.an{
+    position: relative;
+    background-color: rgb(255, 0, 0) ;
+    width:5vw;
+    height:2vw;
+    z-index: 1;
+    left:92vw;
+    top:4.5vw;
+    padding:0.2vw;
+    text-align: center;
+    font-size: 1.8vw;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    font-weight: 500;
+}
+h2{
+    position: relative;
+    text-align: center;
+    font-size:4vw;
+    font-family:Georgia, serif ;
+}
+.btn1{
+    position: relative;
+    top:4.25vw;
+    left:77.9vw;
+    width:7.5vw;
+    height:2.4vw;
+    border:none;
+    font-size:1vw;
+    color: white;
+    font-weight: 700;
+    background-color: rgb(48, 197, 48);
+
+}
+.btn3{
+    position: relative;
+    width:7.5vw;
+    height:2.4vw;
+    border:none;
+    font-size:1vw;
+    color: white;
+    font-weight: 700;
+    background-color: rgb(48, 197, 48);
+
+}
+.btn4{
+    position: relative;
+    width:7.5vw;
+    height:2.4vw;
+    border:none;
+    font-size:1vw;
+    color: white;
+    font-weight: 700;
+    background-color: rgb(219, 12, 12);
+
+}
+
+.div4{
+    background-color: white;
+    width:40vw;
+    height:30vw;
+    margin-left: 4vw;
+    margin-top:15vw;
+    z-index:1;
+    border-radius: 0.7vw;
+    padding:1vw;
+}
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.div5{
+    position: relative;
+    background-color: white;
+    width:40vw;
+    height:30vw;
+    left: 52vw;
+    top: -30vw;
+    border-radius:0.7vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding:1vw;
+}
+.btn2{
+    position: relative;
+    z-index:1;
+    height:2.5vw;
+    width:8vw;
+    font-size: 1.2vw;
+    font-weight: 700;
+    background-color: rgb(35, 192, 35);
+    border: none;
+    color: white;
+
+}
+.p1{
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 1.5vw;
+}
+.p2{
+    font-size: 1.2vw;
+}
+.button3 {
+    background-color:rgb(10, 165, 30); /* Green */
+    border-radius: 0.5vw;
+    position: relative;
+    left: 14vw;
+    width: 10vw;
+    top: 0.7vw;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.6vw;
+    display: inline-block;
+    font-size: 1.2vw;
+    cursor: pointer;
+  }
+.button4{
+    background-color:rgba(255, 0, 0, 0.836);
+    border-radius: 0.5vw;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.6vw;
+    display: inline-block;
+}
+.errorm{
+    font-size: 1vw;
+    color: red;
+}
+.errorlist{
+    display:none;
+    font-size: 1vw;
+    color: red;
+    background-color: white;
+    left:24vw;
+    width:12vw;
+}
+.divmodal{
+    font-size: 1.3vw;
+}
+.vertical-alignment-helper {
+    display: table;
+    height: 100%;
+    margin-left: 30vw;
+    margin-right: 30vw;
+}
+.vertical-center{
+    display: table-cell;
+    vertical-align: middle;
+}
+.topic{
+    text-align: center;
+    font-size: 2vw;
+}
+/*.noty{
+    background-color: bisque;
+    font-size: 1.5vw;
+    padding:0.5vw;
+    border-top-right-radius:1.5vw;
+    border-bottom-left-radius:1.5vw;
+    border-bottom-right-radius:1.5vw;
+}*/
+.box {
+    width: 30vw;
+    margin: 1vw auto;
+    background: rgb(94, 196, 190);
+    padding: 0.6vw;
+    font-weight: 700;
+    color: #000000;
+    font-family: arial;
+    position: relative;
+    font-size: 1.5vw;
+}
+
+.sb2:before {
+    content: "";
+    width: 1vw;
+    height: 1vw;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid #00bfb6;
+    border-top: 10px solid #00bfb6;
+    border-bottom: 10px solid transparent;
+    left: -19px;
+    top: 6px;
+}
+

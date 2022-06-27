@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang=en>
+    <head>
+        <meta charset = ' UTF-8' name="viewport" content="width=device-width, intial-scale=1">
+        <title>Statistics-Animal Support System</title>
+        <link rel="stylesheet" href="{% static 'css/statistics.css/' %}" />
+        <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet'>
+    </head>
+    <body>
+        <img src="{% static 'images/rescueimg.png' %}" alt='hello'  class="img3"/>
+        <div class="decor">
+            <p style="font-family: 'Courgette';"><b>Progress is always important in every work, and so it is the place where you can always keep watch on our progress and can know about our work.</b></p>
+        </div>
+        <div>
+            <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/rescue">Rescue</a></li>
+            <li><a href="/workwithus">Work with us</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/statistics" class="active">Statistics</a></li>
+            <li><a href="/supportus">Support us</a></li>
+          </ul>
+        </div>
+        <div class="div2">
+            <p>This pie-chart depicts number of different types of animals rescued by our community. This representation helps us to know that which kind of animal is in more danger.</p>
+            {% if chart %}
+                <img src="data:image/png;base64, {{chart|safe}}" class="img1">
+            {% endif %}
+
+        </div>
+        <div class="div3">
+            <p>This bar-graph depicts the places from where animals were rescued and for how many times. This also helps us to know about the places which are unsafe for animals. </p>
+            {% if chart %}
+                <img src="data:image/png;base64, {{charts|safe}}" class="img2">
+            {% endif %}
+
+        </div>
+</body>
+</html>

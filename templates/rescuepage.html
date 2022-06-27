@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>Rescue-Animal Support System</title>
+        <link rel="stylesheet" href="{% static 'css/rescue.css' %}" />
+        <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet'>
+    </head>
+    <body>
+        <img src="{% static 'images/rescueimg.png' %}" alt='hello'  class="img3"/>
+        <div class="divdetails">
+        <p align="center" style="font-size: 1.8vw; font-weight: 700;">Register your issue here</p>
+        <section>
+        <form action="" method="POST" enctype="multipart/form-data"> 
+            <table>
+                {% csrf_token %}
+                <p>
+                    {{form.name.label_tag}} {{form.name}}
+        
+                </p>
+                <p>
+                    {{form.mobile.label_tag}}{{form.mobile}}
+                </p>
+                <p>
+                    {{form.animal.label_tag}} {{form.animal}}
+                </p>
+                <p>
+                    {{form.img.label_tag}} {{form.img}}
+                </p>
+                <p>
+                    {{form.strt.label_tag}}&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;{{form.lama.label_tag}} 
+                    <br>
+                    {{form.strt}}&emsp;&ensp;{{form.lama}}
+                </p>
+                <p>
+                    {{form.city.label_tag}}&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{{form.state.label_tag}} 
+                    <br>
+                    {{form.city}}&emsp;&ensp;{{form.state}}
+                </p>
+                <p>
+                    {{form.pin.label_tag}} 
+                    <br>
+                    {{form.pin}}
+                </p>
+            </table>
+            
+        </section>
+            <div class="row"><input type="submit" id="sub" value="Submit"></div>
+        </form>
+        {% if messages %}
+            {% for message in messages %}
+                {% if message.tags %}
+                    <script>
+                        alert('{{message}}');
+                    </script>    
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        </div>
+        <div class="decor">
+            <p>Enter the exact location of the animal or bird in need of help.</p>
+            <p>Fill the below details and our volunteers will get in touch with you as fast as possible.</p>
+        </div>
+        <ul>
+            <li class="li a"><a href="/">Home</a></li>
+            <li class="li a"><a href="/rescue" class="active">Rescue</a></li>
+            <li class="li a"><a href="/workwithus">Work with us</a></li>
+            <li class="li a"><a href="/contact">Contact</a></li>
+            <li class="li a"><a href="/statistics">Statistics</a></li>
+            <li class="li a"><a href="/supportus">Support us</a></li>
+        </ul>
+    </body>
+    </html>

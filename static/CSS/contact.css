@@ -1,0 +1,68 @@
+body {
+    background-color:bisque;
+}
+.img3
+{
+    
+    position: absolute; 
+    left: 0.1%;
+    top:0.1%;
+    z-index: -1;
+    height:auto;
+    max-height:35%;
+    width:99.9vw;
+
+}
+ul{
+    position:absolute;
+    top:19vw;
+    list-style-type: none;
+    margin: 2vw;
+    padding: 0;
+    width: 23vw;
+    background-color: bisque;
+    /*border-radius: 2vw;*/
+}
+li a {
+    display: block;
+    color: rgb(15, 12, 13);
+    padding: 1vw 1vw;
+    text-decoration: none;
+    font-size: 1.9vw;
+    font-weight: 900;
+}
+  
+  /* Change the link color on hover */
+li a:hover {
+    background-color: rgb(255, 255, 255);
+    border-radius: 2vw;
+    color: rgb(0, 153, 255);
+}li a:active{
+    border:  5px solid rgb(20, 238, 74);
+}
+.active{
+    background-color: #f52322;
+    color:#ffffff;
+    border-top-right-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+}
+.div2{
+    background-color: #ffffff;
+    border:0.1vw solid black;
+    padding: 2%;
+    width: 55.5vw;
+    height: fit-content;
+    margin-left: 27vw;
+    margin-right: 20vw;
+    margin-top: 6vw;
+    font-size: 1.7vw;
+}
+p
+{
+    font-size:1.7vw;
+}
+.div3{
+    margin-top: 22vw;
+    margin-left: 27vw;
+    margin-right: 20vw;
+}

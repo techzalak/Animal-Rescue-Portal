@@ -1,0 +1,87 @@
+body {
+    background-color:bisque;
+}
+.img3
+{
+    
+    position: absolute; 
+    left: 0.1%;
+    top:0.1%;
+    z-index: -1;
+    height:auto;
+    max-height:35%;
+    width:99.9vw;
+
+}
+ul{
+    position:absolute;
+    top:19vw;
+    list-style-type: none;
+    margin: 2vw;
+    padding: 0;
+    width: 23vw;
+    background-color: bisque;
+    /*border-radius: 2vw;*/
+}
+li a {
+    display: block;
+    color: rgb(15, 12, 13);
+    padding: 1vw 1vw;
+    text-decoration: none;
+    font-size: 1.9vw;
+    font-weight: 900;
+}
+  
+  /* Change the link color on hover */
+li a:hover {
+    background-color: rgb(255, 255, 255);
+    border-radius: 2vw;
+    color: rgb(0, 153, 255);
+}li a:active{
+    border:  5px solid rgb(20, 238, 74);
+}
+.active{
+    background-color: #f52322;
+    color:#ffffff;
+    border-top-right-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+}
+.decor{
+    font-size: 1.8vw;
+    width: 45vw;
+    height: 20vh;
+    margin-left: 32vw;
+    margin-right: 22vw;
+    margin-top: 21.5vw;
+    text-align:justify;
+    font-weight: 5vw;
+    font-family: 'Lobster', cursive;
+}
+.div2{
+    width:45vw;
+    height:50vw;
+    margin-top:2vw;
+    margin-left:32vw;
+    font-size: 1.8vw;
+    border: 0.2vw solid black;
+    padding: 0.1vw;
+    background-color: #ffffff;
+    font-family: 'Merriweather', serif;
+
+}
+.img1,.img2{
+    width: 40vw;
+    margin-left: 2.5vw;
+}
+.div3{
+    width:45vw;
+    height:50vw;
+    margin-top:5vw;
+    margin-left:32vw;
+    font-size: 1.8vw;
+    border: 0.2vw solid black;
+    padding: 0.1vw;
+    background-color: #ffffff;
+    font-family: 'Merriweather', serif;
+
+}

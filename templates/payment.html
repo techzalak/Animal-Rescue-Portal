@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>Payment-Animal Support System</title>
+        <link rel="stylesheet" href="{% static 'css/payment.css' %}" />
+        <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet'>
+    </head>
+    <body style='background-color: bisque;'>
+        <img src="{% static 'images/rescueimg.png' %}" alt='hello'  class="img3"/>
+
+        <h1 style="font-size: 3vw; text-align :center">Donation</h1>
+        <h1 style="font-size: 2.5vw; text-align :center;">ANIMAL LIVE'S MATTER</h1>
+        <p style="font-family:'Courgette' ;font-size: 2vw; text-align :center;"> Your donation is important to us as small amount of donation can save lives of many animals.</p>
+        <form action="{% url 'charge' %}" method="post">
+            {% csrf_token %}
+            <div style="position: relative;height:auto;left: 46vw;"><script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="{{ key }}"
+                data-description="Payment Gateway"
+                data-amount=""
+                data-locale="auto">
+          </script>
+
+          </div>
+          </form>
+    </body>
+    </html>
